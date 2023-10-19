@@ -72,7 +72,7 @@ In PostgreSQL, `Roles` are used to represent user accounts, unlike other databas
 Before being able to start this task, I needed to PostgreSQL installed on my system, which was done using the [official documentation](https://www.postgresql.org/download/linux/ubuntu/). After that, I entered into Postgres with `sudo su postgres` and started the `psql` terminal for interacting with PostgreSQL. This was done in the following way:
 <div align="center">
 
-![image](https://im3.ezgif.com/tmp/ezgif-3-72bc11f559.gif)
+![image](https://i.imgur.com/ryGiwc7.gif)
 </div>
 
 As per this task, we were to create 3 roles and assign passwords to each of them. The demonstration of how this task was executed has been provided below.
@@ -87,7 +87,7 @@ As per the first sub-task, we were asked to create the following three roles:
 After ensuring that I had entered into my PostgreSQL server, I started working on the first sub-task and for that, I utilised the 'CREATE ROLE' SQL statement and was able to successfully create these Roles. The go-through of how these commands were created is as follows 
 <div align="center">
 
-![image](https://im3.ezgif.com/tmp/ezgif-3-7df0dc577c.gif)
+![image](https://i.imgur.com/JAb4jzv.gif)
 </div>
 
 In order to create the three roles that have been mentioned above, I wrote the following queries for creating the respective Roles:
@@ -138,7 +138,7 @@ The output of running all these queries has been provided below, where `ALTER RO
 
 <div align="center">
 
-![image](https://im3.ezgif.com/tmp/ezgif-3-4ec3113626.gif)
+![image](https://i.imgur.com/swjmSPU.gif)
 </div>
 
 _____________________________
@@ -163,7 +163,7 @@ The resources utilised for working on this task included the following posts fro
 As per the first sub-task under the `Task 2`, I created a database called `ecommerce`. A go through of how this task was done is as follows:
 <div align="center">
 
-![image](https://im3.ezgif.com/tmp/ezgif-3-bbb5606dd2.gif)
+![image](https://i.imgur.com/k9PfrRw.gif)
 </div>
 
 In order to create such a database, I wrote the following query:
@@ -190,7 +190,7 @@ Using this [TablePlus](https://tableplus.com/blog/2018/04/postgresql-how-to-gran
 Under this sub-task, all privileges related to the `ecommerce` database were to be assigned to the role of `admin`. I was able to assign the required privileges through the following steps:
 <div align="center">
 
-![image](https://im3.ezgif.com/tmp/ezgif-3-a0ddae954c.gif)
+![image](https://i.imgur.com/Znb2SKb.gif)
 </div>
 
 Before assigning the privileges, I ran the `\l` command to check the current assigned privileges to this database. This information was to be displayed under the  `Access Privileges` column of the displayed output, which was currently empty.
@@ -223,7 +223,7 @@ As per this sub-task, I was to assign `Read` and `Write` privileges to the `empl
 A go-through of how this entire sub-task was executed, has been provided below for reference:
 <div align="center">
 
-![image](https://im3.ezgif.com/tmp/ezgif-3-4054c02db7.gif)
+![image](https://i.imgur.com/i2b4ZKN.gif)
 </div>
 
 Using the resources mentioned before as reference, I wrote the following query for assigning the `employees` role with `Read` and `Write` privileges for the `products` tables:
@@ -257,7 +257,7 @@ In addition to the resouces mentioned previously for the second task, I also uti
 I was able to successfully grant `Read Only` priviliges to the `customer` role and execute this task using the following steps:
 <div align="center">
 
-![image](https://im3.ezgif.com/tmp/ezgif-3-9b2730f5f8.gif)
+![image](https://i.imgur.com/QFuY0L0.gif)
 </div>
 
 In order to grant `Read Only` priviliges to the `Customer` role, I wrote the following query:
@@ -400,7 +400,7 @@ The above query allowed me to enter the `ecommerce` database as the `admin` and 
 As specified in this sub-task, I was to create a schema called `product`. In order to do so, I first granted the access of the `public` schema to admin, which was earlier only granted the access to the `ecommerce` database. The go-through of this sub-task is as follows:
 <div align="center">
 
-![image](https://im5.ezgif.com/tmp/ezgif-5-a9b0de8e7e.gif)
+![image](https://i.imgur.com/gKFCC1v.gif)
 </div>
 
 This was done by running the following query:
@@ -426,7 +426,7 @@ product_id, product_name, price, and stock_quantity.
 In order to create a table called `products` with the `product_id`, `product_name`, `price` and `stock_quantity` included as the columns, I had to write a query that involved the `CREATE TABLE` SQL keywords. This sub-task was completed in the following way:
 <div align="center">
 
-![image](https://im5.ezgif.com/tmp/ezgif-5-cd7c1abf19.gif)
+![image](https://im.ezgif.com/tmp/ezgif-1-018dff21b7.gif)
 </div>
 
 The query that was written to create a table called `products` with the specified columns included, was as follows:
