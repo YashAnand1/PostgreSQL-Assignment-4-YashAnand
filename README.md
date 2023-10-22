@@ -80,7 +80,7 @@ Before being able to start this task, I needed to PostgreSQL installed on my sys
 As per this task, we were to create 3 roles and assign passwords to each of them. The demonstration of how this task was executed has been provided below.
 
 ## **1.1. Creating Three Roles**
-> 1.1. Create three roles: admin, employee, and customer. Use the CREATE
+> 1.1. Create three roles: admin, employee, and customer. Use the CREATE ROLE statement
 
 As per the first sub-task, we were asked to create the following three roles:
 - admin
