@@ -614,4 +614,4 @@ ____________________
 
 After the completion of these 4 tasks, which greatly depended on building relationships between tables, I was able to learn and understand the concept of primary keys, foreign keys, constraints, joins and alters. Through this document, I was also able to demonstrate and perform the assigned tasks, which helped me gain a lot of practical understanding of PostgreSQL and SQL.
 
---------h
+--------
