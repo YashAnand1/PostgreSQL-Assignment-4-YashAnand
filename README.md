@@ -11,7 +11,11 @@ ________________________________________________________________________________
 
 ## Contents
 
-  - [**Overview**](#overview)
+- [PostgresSQL Session 4](#postgressql-session-4)
+    - [— Task Documentation by Yash Anand —](#-task-documentation-by-yash-anand-)
+  - [Contents](#contents)
+  - [Contents](#contents-1)
+- [**Overview**](#overview)
   - [**Task 1: Create Roles**](#task-1-create-roles)
   - [**1.1. Creating Three Roles**](#11-creating-three-roles)
   - [**1.2. Assigning Passwords**](#12-assigning-passwords)
@@ -22,16 +26,21 @@ ________________________________________________________________________________
     - [**2.2.2 Read \& Write Table Privileges To `employee`**](#222-read--write-table-privileges-to-employee)
     - [**2.2.3 Read Table Privileges To `customer`**](#223-read-table-privileges-to-customer)
   - [**Task 3: Host Based Authentication**](#task-3-host-based-authentication)
-    - [**3.1. Understanding `pg_hba.conf`**](#31-understanding-pg_hbaconf)
-    - [**3.2 Connecting Localhost With All Roles**](#32-connecting-localhost-with-all-roles)
-    - [**3.3 Allowing Admin To Connect From All IPs**](#33-allowing-admin-to-connect-from-all-ips)
+  - [**3.1. Understanding `pg_hba.conf`**](#31-understanding-pg_hbaconf)
+  - [**3.2 Connecting Localhost With All Roles**](#32-connecting-localhost-with-all-roles)
+  - [**3.3 Allowing Admin To Connect From All IPs**](#33-allowing-admin-to-connect-from-all-ips)
   - [**Task 4: Table and Schema Creation**](#task-4-table-and-schema-creation)
-    - [**4.1. Creating Product Schema**](#41-creating-product-schema)
-    - [**4.2. Creating `products` Table**](#42-creating-products-table)
+  - [**4.1. Creating Product Schema**](#41-creating-product-schema)
+  - [**4.2. Creating `products` Table**](#42-creating-products-table)
   - [**Task 5: Generate Self-Signed Certificates**](#task-5-generate-self-signed-certificates)
+  - [**5.1. Generating Self-Signed SSL certificates**](#51-generating-self-signed-ssl-certificates)
   - [**Task 6: Configure PostgreSQL**](#task-6-configure-postgresql)
+  - [**6.1. Enabling TLS In `postgresql.conf`**](#61-enabling-tls-in-postgresqlconf)
   - [**Task 7: Configure pg\_hba.conf**](#task-7-configure-pg_hbaconf)
+  - [**7.1. Allowing TLS In `pg_hba.conf`**](#71-allowing-tls-in-pg_hbaconf)
   - [**Task 8: Testing**](#task-8-testing)
+  - [**8.1. Connecting To `ecommerce` Using Roles**](#81-connecting-to-ecommerce-using-roles)
+  - [**8.2. Testing Privileges Of Roles**](#82-testing-privileges-of-roles)
   - [**Conclusion**](#conclusion)
 
 
@@ -81,6 +90,7 @@ As per this task, we were to create 3 roles and assign passwords to each of them
 
 ## **1.1. Creating Three Roles**
 > 1.1. Create three roles: admin, employee, and customer. Use the CREATE
+
 As per the first sub-task, we were asked to create the following three roles:
 - admin
 - employee
@@ -428,7 +438,7 @@ product_id, product_name, price, and stock_quantity.
 In order to create a table called `products` with the `product_id`, `product_name`, `price` and `stock_quantity` included as the columns, I had to write a query that involved the `CREATE TABLE` SQL keywords. This sub-task was completed in the following way:
 <div align="center">
 
-![image](https://im.ezgif.com/tmp/ezgif-1-018dff21b7.gif)
+![image](https://i.imgur.com/l9WB0sP.gif)
 </div>
 
 The query that was written to create a table called `products` with the specified columns included, was as follows:
@@ -509,7 +519,8 @@ ______
 </div>
 
 ## **6.1. Enabling TLS In `postgresql.conf`**
-> Generate self-signed SSL certificates for the PostgreSQL server. You can
+> Generate self-signed SSL certificates for the PostgreSQL server.  
+
 For being able to initiate SSL for our PostgreSQL server, it was important to enable TLS and specify the path of the SSL certificates in the postgres.conf file. For being able to do this, I refered to [this tutorial](https://www.cherryservers.com/blog/how-to-configure-ssl-on-postgresql) by CherryServers.
 
 To start, I entered into the directort which stored the `postgresql.conf` file, that is stored in `/etc/postgresql/16/main/`. For users with a different version of Postgres, the `16` in this file path would be replaced with their specific Postgres version. Regardless, I was able to make changes to this configuration file after entering it using the following command:
@@ -546,6 +557,7 @@ ______
 
 ## **7.1. Allowing TLS In `pg_hba.conf`**
 > Generate self-signed SSL certificates for the PostgreSQL server. You can
+
 For this task, I again refered to [this tutorial](https://www.cherryservers.com/blog/how-to-configure-ssl-on-postgresql) by CherryServers. Inside the `/etc/postgresql/16/main/` directory, I ran the `sudo nano pg_hba.conf` command for being able to modify this file. With the SSL enabled in `postgresql.conf`, it was also necessary to have `pg_hba.conf` to allow SSL connections with my PostgreSQL server. 
 
 This was done by making the following changes to the `pg_hba.conf` file, which is found in the same directory as `postgresql.conf`:
@@ -602,8 +614,6 @@ Given that we had already entered assigned specific privileges to `admin`, `empl
   ```
   psql -h 127.0.0.1 -U admin -d ecommerce
   ```
-  Having logged in as the admin, I ran the  
-
 ____________________
 
 <div align="center">
@@ -611,6 +621,6 @@ ____________________
 ## **Conclusion**
 </div>
 
-Through these assigned tasks, I was able to practically and theoretically better understand the usage of authentication and authorisation in PostgreSQL. Additionally, I gained lots of knowledge about SSL connections and how they help make the process of data interaction more secure. 
+After the completion of these 4 tasks, which greatly depended on building relationships between tables, I was able to learn and understand the concept of primary keys, foreign keys, constraints, joins and alters. Through this document, I was also able to demonstrate and perform the assigned tasks, which helped me gain a lot of practical understanding of PostgreSQL and SQL.
 
 --------
